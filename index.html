@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="main-container">
+
+        <header>
+            <h1>Typing Speed Test</h1>
+            <p>Test your typing speed and accuracy</p>
+        </header>
+
+        <!-- -------------------------------------------------------------------------------- -->
+        
+        <div class="test-options-container">
+            <label>Test Duration:</label>
+
+            <div class="time-options-container">
+                <button class="time-option" data-time="10">10s</button>
+                <button class="time-option selected" data-time="30">30s</button>
+                <button class="time-option" data-time="60">60s</button>
+            </div>
+
+        </div>
+
+        <!-- -------------------------------------------------------------------------------- -->
+
+        <div class="stats-container">
+
+            <div class="stat-box">
+                <div class="title">WPM</div>
+                <div class="value" id="wpm">0</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="title">Accuracy</div>
+                <div class="value" id="accuracy">0%</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="title">Time</div>
+                <div class="value" id="timer">30s</div>
+            </div>
+            
+        </div>
+
+        <!-- -------------------------------------------------------------------------------- -->
+        
+        <div class="type-test">
+            
+            <div class="words" id="words-display"></div>
+
+            <div class="input-area">
+                <input type="text" id="typing-input" placeholder="Start typing..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            </div>
+
+        </div>
+
+        <!-- -------------------------------------------------------------------------------- -->
+
+        <div id="results-container" class="hidden">
+            <h2>Test Results</h2>
+
+            <div class="charts-container">
+                <canvas id="wpm-chart"></canvas>
+            </div>
+
+        </div>
+
+        <!-- -------------------------------------------------------------------------------- -->
+        
+        <div class="restart">
+            <button id="restart-button">Restart Test</button>
+            <p class="shortcut-tip">Press Space + Enter to restart anytime</p>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
